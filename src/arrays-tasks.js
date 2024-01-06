@@ -20,9 +20,11 @@
  *    getIntervalArray(0, 100) => [ 0, 1, 2, ..., 100 ]
  *    getIntervalArray(3, 3) => [ 3 ]
  */
-function getIntervalArray(/* start, end */) {
-  throw new Error('Not implemented');
-}
+const getIntervalArray = (start, end) => {
+  const arr = new Array(end - start + 1).fill(0);
+
+  return Array.from(arr, (elem, i) => start + i);
+};
 
 /**
  * Returns a new array where each element is the sum of the corresponding elements
