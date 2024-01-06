@@ -238,9 +238,9 @@ const doubleArray = (arr) => {
  *    toStringList([1, 2, 3, 4, 5]) => '1,2,3,4,5'
  *    toStringList(['rock', 'paper', 'scissors']) => 'rock,paper,scissors'
  */
-function toStringList(/* arr */) {
-  throw new Error('Not implemented');
-}
+const toStringList = (arr) => {
+  return arr.join(',');
+};
 
 /**
  * Returns array containing only unique values from the specified array.
