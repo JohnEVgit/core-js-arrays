@@ -223,9 +223,9 @@ const getTail = (arr, n) => {
  *    doubleArray([0, 1, 2, 3, 4, 5]) => [0, 1, 2, 3, 4, 5, 0, 1, 2, 3, 4, 5]
  *    doubleArray([]) => []
  */
-function doubleArray(/* arr */) {
-  throw new Error('Not implemented');
-}
+const doubleArray = (arr) => {
+  return arr.concat(arr);
+};
 
 /**
  * Concatenates all elements from specified array into single string with ',' delimiter.
