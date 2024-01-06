@@ -39,9 +39,13 @@ const getIntervalArray = (start, end) => {
  *    sumArrays([10, 20, 30], [5, 10, 15]) => [15, 30, 45]
  *    sumArrays([-1, 0, 1], [1, 2, 3, 4]) => [0, 2, 4, 4]
  */
-function sumArrays(/* arr1, arr2 */) {
-  throw new Error('Not implemented');
-}
+const sumArrays = (arr1, arr2) => {
+  if (arr1.length >= arr2.length) {
+    return arr1.map((elem, i) => elem + (arr2[i] || 0));
+  }
+
+  return arr2.map((elem, i) => elem + (arr1[i] || 0));
+};
 
 /**
  * Returns an index of the specified element in array or -1 if element is not found.
