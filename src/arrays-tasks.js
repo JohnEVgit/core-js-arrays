@@ -327,9 +327,9 @@ const selectMany = (arr, childrenSelector) => {
  *   calculateBalance([ [ 10, 8 ], [ 1, 5 ] ])  => (10 - 8) + (1 - 5) = 2 + -4 = -2
  *   calculateBalance([]) => 0
  */
-function calculateBalance(/* arr */) {
-  throw new Error('Not implemented');
-}
+const calculateBalance = (arr) => {
+  return arr.reduce((acc, elem) => acc + (elem[0] - elem[1]), 0);
+};
 
 /**
  * Breaks an array into chunks of the specified size.
