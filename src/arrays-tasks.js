@@ -363,9 +363,9 @@ const createChunks = (arr, chunkSize) => {
  *    generateOdds(2) => [ 1, 3 ]
  *    generateOdds(5) => [ 1, 3, 5, 7, 9 ]
  */
-function generateOdds(/* len */) {
-  throw new Error('Not implemented');
-}
+const generateOdds = (len) => {
+  return Array.from({ length: len }).map((elem, i) => (i + 1) * 2 - 1);
+};
 
 /**
  * Returns an element from the multidimensional array by the specified indices.
