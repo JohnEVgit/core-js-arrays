@@ -553,9 +553,22 @@ const shiftArray = (arr, n) => {
  *   sortDigitNamesByNumericOrder([ 'nine','eight','nine','eight' ]) => [ 'eight','eight','nine','nine']
  *   sortDigitNamesByNumericOrder([ 'one','one','one','zero' ]) => [ 'zero','one','one','one' ]
  */
-function sortDigitNamesByNumericOrder(/* arr */) {
-  throw new Error('Not implemented');
-}
+const sortDigitNamesByNumericOrder = (arr) => {
+  const numbersList = [
+    'zero',
+    'one',
+    'two',
+    'three',
+    'four',
+    'five',
+    'six',
+    'seven',
+    'eight',
+    'nine',
+  ];
+
+  return arr.sort((a, b) => numbersList.indexOf(a) - numbersList.indexOf(b));
+};
 
 /**
  * Swaps the head and tail of the specified array:
