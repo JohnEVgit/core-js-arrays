@@ -343,9 +343,13 @@ const calculateBalance = (arr) => {
  *    createChunks(['a', 'b', 'c', 'd', 'e'], 2) => [['a', 'b'], ['c', 'd'], ['e']]
  *    createChunks([10, 20, 30, 40, 50], 1) => [[10], [20], [30], [40], [50]]
  */
-function createChunks(/* arr, chunkSize */) {
-  throw new Error('Not implemented');
-}
+const createChunks = (arr, chunkSize) => {
+  const resArr = Array.from({ length: Math.ceil(arr.length / chunkSize) });
+
+  return resArr.map((elem, i) => {
+    return arr.slice(i * chunkSize, (i + 1) * chunkSize);
+  });
+};
 
 /**
  * Generates an array of odd numbers of the specified length.
